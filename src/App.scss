@@ -1,0 +1,248 @@
+@mixin border-radius($top-left:10px, $top-right:null, $bottom-right:null, $bottom-left:null){
+  -webkit-border-radius: $top-left $top-right $bottom-right $bottom-left;
+     -moz-border-radius: $top-left $top-right $bottom-right $bottom-left;
+      -ms-border-radius: $top-left $top-right $bottom-right $bottom-left;
+          border-radius: $top-left $top-right $bottom-right $bottom-left;  
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #2a2a2a;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+
+body * {
+  box-sizing: border-box;
+
+}
+h1{
+  margin: 1rem 0;
+  padding: 0 0 0.5rem 0;
+  color: #fff;
+  border-bottom: 1px solid grey;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 2rem;
+  text-align: center;
+}
+.container{
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.contentCard{
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  height: auto;
+  background-color: #000;
+  border-radius: 10px;
+  padding:1rem 1rem 1rem;
+  white-space: nowrap;
+  color:#fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+  border: 6px solid #404040;
+  .contentCard__img{
+    width: 180px;
+    height: auto;
+    object-fit: cover;
+    border:10px solid rgba(255,255,255,0.2);
+    border-radius: 100%;
+
+  }
+  h2{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 15px
+  }
+  p{
+    margin: 0;
+    padding: 1rem 0 0 0;
+    color:#ffcc35;
+  }
+}
+
+.contentSquare{
+  width: 100%;
+  max-width: 600px;
+  margin: 1rem auto;
+  padding: 1rem;
+  height: auto;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#7d7e7d+0,0e0e0e+100&0+0,1+100 */
+  background: -moz-linear-gradient(top,  rgba(125,126,125,0) 0%, rgba(14,14,14,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(125,126,125,0) 0%,rgba(14,14,14,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(125,126,125,0) 0%,rgba(14,14,14,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007d7e7d', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-9 */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  border-top:2px solid rgba(255,255,255,0.3);
+  border-bottom:1px solid rgba(255,255,255,0.3);
+  &__square{
+    width: 25%;
+    height:130px;
+    padding: 1rem;
+    @include border-radius(1px);
+    background-color: rgb(160 160 160);
+    border: 1px solid #151515;
+    cursor: pointer;
+}
+}
+
+.contentForm__group{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgb(71 71 71 / 54%);
+  border-radius: 10px;
+  padding: 1.3rem;
+  margin: 0 0 1rem 0;
+  color: #fff;
+}
+.contentForm__group label{
+  width:20%;
+  letter-spacing: 1px;
+}
+.contentForm__group input{
+  width: 60%;
+  height: 35px;
+  border-radius: 5px;
+  border:none;
+  padding: 5px 10px;
+  margin-right:10px;
+}
+
+.contentForm__group input.number{
+  width: 20%;
+  height: 35px;
+  border-radius: 5px;
+  border:none;
+  padding: 5px 10px;
+}
+
+.contentForm__buttom{
+  border-radius: 10px;
+  padding: 15px 20px;
+  background-color: aqua;
+  color: #fff;
+}
+
+.contentForm__btn{
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: #3e3e3e;
+  color: #fff;
+  box-shadow: 2px 2px 8px rgb(0 0 0 / 40%);
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  margin :1rem 0;
+}
+
+.contentForm__btn:hover{
+  background: #2f2f2f;
+}
+
+.contentForm__btn-reset{
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: #545454;
+  color: #fff;
+  box-shadow: 2px 2px 8px rgb(0 0 0 / 40%);
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  margin: 1rem 0;
+}
+
+.contentForm__btn-reset:hover{
+  background: #2f2f2f;
+  margin: 1rem 0;
+}
+
+.resData ul{
+  list-style: none;
+  color: #fff;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+.resData ul h4{
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 17px;
+  margin: 2rem 0 0 0;
+}
+
+.resData ul li{
+  padding:1rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+input::placeholder {
+  color: rgb(165, 165, 165);
+  font-size: 1.2em;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+.validation-errors{
+  color: rgb(255, 0, 0);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  display: block;
+  padding: 0 0 10px 10px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.time{
+  margin:0 0 1rem 0!important;
+  padding:0!important;
+}
+
+.listas{
+  list-style: none;
+  color:#fff;
+  li{
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+    padding: 0.7rem 0;
+  }
+}
